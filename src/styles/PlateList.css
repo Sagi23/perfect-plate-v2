@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
-button {
+.btn {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   color: black;
@@ -7,7 +7,7 @@ button {
   font-weight: 500;
 }
 
-button:hover {
+.btn:hover {
   cursor: pointer;
   background-color: #707070;
   color: white;
@@ -35,8 +35,8 @@ button:hover {
 .landing-right .titles {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
   text-align: center;
   gap: 0 2em;
   font-weight: 600;
@@ -45,15 +45,20 @@ button:hover {
 .landing-right .content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (15%)[6];
-      grid-template-columns: repeat(6, 15%);
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
   justify-items: center;
+  position: relative;
+}
+
+.container {
+  max-height: 319px;
   max-height: 22em;
   overflow: auto;
   width: 103%;
 }
 
-.landing-right .total-result-area {
+.total-result-area {
   position: absolute;
   bottom: 0;
   margin-left: -0.8em;
@@ -65,7 +70,7 @@ button:hover {
   gap: 0 2em;
 }
 
-.landing-right .total-result-area .card {
+.total-result-area .card {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr 1fr;
@@ -82,11 +87,11 @@ button:hover {
   font-weight: 600;
 }
 
-.landing-right .total-result-area .card p {
+.total-result-area .card p {
   margin-bottom: -2.5em;
 }
 
-.landing-right .total-result-area .card .title {
+.total-result-area .card .title {
   margin-bottom: 1em;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
@@ -94,5 +99,17 @@ button:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
+}
+
+.btn-1 {
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 1;
+  grid-column: 6/7;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 /*# sourceMappingURL=PlateList.css.map */

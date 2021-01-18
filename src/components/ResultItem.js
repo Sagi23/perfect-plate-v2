@@ -1,11 +1,7 @@
 import React from "react";
-import uuid from "uuid/dist/v4";
+import "../styles/ResultArea.css";
 
-function ResultItem({ pro, cal, fat, setPlate, item, amount, plate }) {
-  const handleClick = () => {
-    setPlate([{ item, amount, pro, cal, fat, id: uuid() }, ...plate]);
-  };
-
+function ResultItem({ pro, cal, fat }) {
   return (
     <div className="result-area">
       <div className="protein card">
@@ -20,9 +16,6 @@ function ResultItem({ pro, cal, fat, setPlate, item, amount, plate }) {
         <p>{fat}</p>
         <p className="title">fat</p>
       </div>
-      <button className="btn" onClick={handleClick}>
-        add to plate
-      </button>
     </div>
   );
 }

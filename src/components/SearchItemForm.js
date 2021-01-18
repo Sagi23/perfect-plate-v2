@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/SearchItemForm.css";
 import useInputState from "../hooks/useInputState";
 import ResultItem from "./ResultItem";
+import uuid from "uuid/dist/v4";
 
 function SearchItemForm({ getData, cal, pro, fat, setPlate, plate }) {
   const [item, handleItemChange] = useInputState("");
@@ -12,6 +13,10 @@ function SearchItemForm({ getData, cal, pro, fat, setPlate, plate }) {
     getData(amount, item);
     // resetItem();
     // resetAmount();
+  };
+
+  const handleClick = () => {
+    setPlate([{ item, amount, pro, cal, fat, id: uuid() }, ...plate]);
   };
 
   return (
@@ -44,17 +49,14 @@ function SearchItemForm({ getData, cal, pro, fat, setPlate, plate }) {
         />
         <span>gr</span>
         <br />
-        <button>result</button>
+        <div className="to-center">
+          <button className="btn">result</button>
+        </div>
       </form>
-      <ResultItem
-        cal={cal}
-        pro={pro}
-        fat={fat}
-        item={item}
-        amount={amount}
-        setPlate={setPlate}
-        plate={plate}
-      />
+      <ResultItem cal={cal} pro={pro} fat={fat} />
+      <button className="btn" onClick={handleClick}>
+        add to plate
+      </button>
     </div>
   );
 }

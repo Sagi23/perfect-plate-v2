@@ -25,7 +25,7 @@ const useGetData = (size, item) => {
 
   useEffect(() => {
     getData(size, item);
-  }, [size, item, cal]);
+  }, [size, item]);
 
   return { getData, cal, pro, fat };
 };

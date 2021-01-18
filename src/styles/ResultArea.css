@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+.btn {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: black;
+  background-color: #f2f2f2;
+  font-weight: 500;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #707070;
+  color: white;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.result-area {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 0 2em;
+}
+
+.result-area .card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  border: 1px solid #707070;
+  border-radius: 50%;
+  width: 7em;
+  height: 7em;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2em 0;
+  font-weight: 600;
+}
+
+.result-area .card p {
+  margin-bottom: -2.5em;
+}
+
+.result-area .card .title {
+  margin-bottom: 1em;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.result-area .nums {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+button {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  border-radius: 2em;
+  border: 1px solid #707070;
+  font-size: 1.2rem;
+  width: 80%;
+  padding: 0.5em 0.5em;
+}
+/*# sourceMappingURL=ResultArea.css.map */

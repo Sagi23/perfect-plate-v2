@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/PlateList.css";
 import PlateItem from "./PlateItem";
+import ResultItem from "./ResultItem";
 function PlateList({ plate, setPlate }) {
   const removeItem = (id) => {
     const newPlate = plate.filter((item) => (item.id !== id ? plate : ""));
@@ -36,23 +37,15 @@ function PlateList({ plate, setPlate }) {
         <p>protein</p>
         <p>calories</p>
         <p>fat</p>
+        <p>Delete</p>
       </div>
-      <>{renderdPlate}</>
-      <div className="total">
-        <div className="total-result-area">
-          <div className="total-protein card">
-            <p className="pro1">{totalProAmount}</p>
-            <p className="title">protein</p>
-          </div>
-          <div className="total-cal card">
-            <p className="cal1">{totalCalAmount}</p>
-            <p className="title">calories</p>
-          </div>
-          <div className="total-fat card">
-            <p className="fat1">{totalFatAmount}</p>
-            <p className="title">fat</p>
-          </div>
-        </div>
+      <div className="container">{renderdPlate}</div>
+      <div className="total-result-area">
+        <ResultItem
+          cal={totalCalAmount}
+          pro={totalProAmount}
+          fat={totalFatAmount}
+        />
       </div>
     </div>
   );
