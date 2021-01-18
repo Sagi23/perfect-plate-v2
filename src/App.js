@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Header from "./components/Header";
+import PlateList from "./components/PlateList";
+import SearchForm from "./components/SearchItemForm";
+import useGetData from "./hooks/useGetData";
 
 function App() {
+  const [plate, setPlate] = useState([]);
+  const { getData, cal, pro, fat } = useGetData();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <SearchForm
+        getData={getData}
+        cal={cal}
+        pro={pro}
+        fat={fat}
+        setPlate={setPlate}
+        plate={plate}
+      />
+      {/*  */}
+      <PlateList plate={plate} />
+      {/* PlateForm */}
+      {/* About */}
+      {/*  */}
     </div>
   );
 }
