@@ -11,16 +11,18 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <SearchForm
-        getData={getData}
-        cal={cal}
-        pro={pro}
-        fat={fat}
-        setPlate={setPlate}
-        plate={plate}
-      />
-      {/*  */}
-      <PlateList plate={plate} />
+      <div className="landing">
+        <SearchForm
+          getData={getData}
+          cal={cal}
+          pro={pro}
+          fat={fat}
+          setPlate={setPlate}
+          plate={plate}
+        />
+        {/*  */}
+        <PlateList plate={plate} setPlate={setPlate} />
+      </div>
       {/* PlateForm */}
       {/* About */}
       {/*  */}

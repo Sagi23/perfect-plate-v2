@@ -45,10 +45,9 @@ button:hover {
 .landing-right .content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-columns: (15%)[6];
+      grid-template-columns: repeat(6, 15%);
   justify-items: center;
-  gap: 0 2.5em;
   max-height: 22em;
   overflow: auto;
   width: 103%;

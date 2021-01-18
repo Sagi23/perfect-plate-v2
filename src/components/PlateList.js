@@ -1,14 +1,23 @@
 import React from "react";
 import "../styles/PlateList.css";
-function PlateList({ plate }) {
+import PlateItem from "./PlateItem";
+function PlateList({ plate, setPlate }) {
+  const removeItem = (id) => {
+    const newPlate = plate.filter((item) => (item.id !== id ? plate : ""));
+    setPlate(newPlate);
+  };
+
   const renderdPlate = plate.map((item) => (
-    <div className="content">
-      <p>{item.item},</p>
-      <p>{item.amount},</p>
-      <p className="pro1">{item.pro},</p>
-      <p className="cal1">{item.cal},</p>
-      <p className="fat1">{item.fat}</p>
-    </div>
+    <PlateItem
+      handleClick={removeItem}
+      key={item.id}
+      item={item.item}
+      amount={item.amount}
+      pro={item.pro}
+      cal={item.cal}
+      fat={item.fat}
+      id={item.id}
+    />
   ));
   const calAmount = plate.map((item) => item.cal);
   const proAmount = plate.map((item) => item.pro);
@@ -20,8 +29,8 @@ function PlateList({ plate }) {
 
   return (
     <div className="landing-right">
-      <p class="head">My Plate</p>
-      <div class="titles">
+      <p className="head">My Plate</p>
+      <div className="titles">
         <p>name</p>
         <p>serving size</p>
         <p>protein</p>

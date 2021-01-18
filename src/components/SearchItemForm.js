@@ -4,8 +4,8 @@ import useInputState from "../hooks/useInputState";
 import ResultItem from "./ResultItem";
 
 function SearchItemForm({ getData, cal, pro, fat, setPlate, plate }) {
-  const [item, handleItemChange, resetItem] = useInputState("");
-  const [amount, handleAmountChange, resetAmount] = useInputState("");
+  const [item, handleItemChange] = useInputState("");
+  const [amount, handleAmountChange] = useInputState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
