@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+.btn {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: black;
+  background-color: #f2f2f2;
+  font-weight: 500;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #707070;
+  color: white;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.about {
+  width: 50%;
+  margin: 10em auto 5em;
+  font-size: 25px;
+  background-color: white;
+  padding: 1em 2em;
+}
+
+.about h2 {
+  text-align: center;
+  margin: 2em 0 0 0;
+}
+
+.about h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 2em 0 0 0;
+}
+
+.about p {
+  line-height: 1.8;
+}
+/*# sourceMappingURL=About.css.map */

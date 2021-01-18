@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import About from "./components/About";
 import Header from "./components/Header";
 import PlateList from "./components/PlateList";
 import SearchForm from "./components/SearchItemForm";
@@ -20,12 +21,9 @@ function App() {
           setPlate={setPlate}
           plate={plate}
         />
-        {/*  */}
         <PlateList plate={plate} setPlate={setPlate} />
       </div>
-      {/* PlateForm */}
-      {/* About */}
-      {/*  */}
+      <About />
     </div>
   );
 }

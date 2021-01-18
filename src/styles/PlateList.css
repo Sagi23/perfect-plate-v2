@@ -61,13 +61,10 @@
 .total-result-area {
   position: absolute;
   bottom: 0;
-  margin-left: -0.8em;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  gap: 0 2em;
+  left: 0;
+  right: 0;
 }
 
 .total-result-area .card {

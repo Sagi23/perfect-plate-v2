@@ -12,6 +12,7 @@ body {
     url("./static/carrot.svg");
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
   background-position: 92% 2%, 15% 10%, 50% 40%, 110% 75%, 10% 60%;
+  background-color: #efefef;
 }
 
 code {

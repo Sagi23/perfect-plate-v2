@@ -54,9 +54,11 @@ function SearchItemForm({ getData, cal, pro, fat, setPlate, plate }) {
         </div>
       </form>
       <ResultItem cal={cal} pro={pro} fat={fat} />
-      <button className="btn" onClick={handleClick}>
-        add to plate
-      </button>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <button className="btn" onClick={handleClick}>
+          add to plate
+        </button>
+      </div>
     </div>
   );
 }
