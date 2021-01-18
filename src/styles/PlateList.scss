@@ -27,13 +27,14 @@
     justify-items: center;
     // gap: 0 2.5em;
     position: relative;
+    left: -16px;
+    right: 10px;
   }
 }
 .container {
   max-height: 319px;
-  max-height: 22em;
   overflow: auto;
-  width: 103%;
+  //   width: 103%;
 }
 .total-result-area {
   position: absolute;
@@ -69,4 +70,38 @@
   font-size: 16px;
   grid-column: 6/7;
   align-self: center;
+}
+
+@media (max-width: 1024px) {
+  .landing-right {
+    margin-top: 5em;
+    height: 40em;
+    width: 80%;
+    padding: 1em 1em;
+    .titles {
+      gap: 0 1em;
+      margin-left: -0.5em;
+    }
+    .total-result-area {
+      width: 100%;
+      .card {
+        width: 5em;
+        height: 5em;
+        p {
+          margin-bottom: 1em;
+        }
+        .title {
+          margin-top: -1em;
+        }
+      }
+    }
+    .content {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      justify-items: center;
+      gap: 0 2em;
+      max-height: 22em;
+      overflow: auto;
+    }
+  }
 }

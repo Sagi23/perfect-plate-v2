@@ -46,3 +46,25 @@
 .to-center {
   display: flex;
 }
+
+@media (max-width: 1024px) {
+  .landing-left {
+    width: 80%;
+    padding: 1em 1em;
+    .result-area {
+      margin-left: 0em;
+      .card {
+        width: 5em;
+        height: 5em;
+      }
+    }
+    form {
+      .size {
+        width: 84%;
+      }
+      input {
+        width: 95%;
+      }
+    }
+  }
+}

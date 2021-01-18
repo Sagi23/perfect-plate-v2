@@ -49,13 +49,13 @@
       grid-template-columns: repeat(6, 1fr);
   justify-items: center;
   position: relative;
+  left: -16px;
+  right: 10px;
 }
 
 .container {
   max-height: 319px;
-  max-height: 22em;
   overflow: auto;
-  width: 103%;
 }
 
 .total-result-area {
@@ -108,5 +108,41 @@
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+@media (max-width: 1024px) {
+  .landing-right {
+    margin-top: 5em;
+    height: 40em;
+    width: 80%;
+    padding: 1em 1em;
+  }
+  .landing-right .titles {
+    gap: 0 1em;
+    margin-left: -0.5em;
+  }
+  .landing-right .total-result-area {
+    width: 100%;
+  }
+  .landing-right .total-result-area .card {
+    width: 5em;
+    height: 5em;
+  }
+  .landing-right .total-result-area .card p {
+    margin-bottom: 1em;
+  }
+  .landing-right .total-result-area .card .title {
+    margin-top: -1em;
+  }
+  .landing-right .content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    gap: 0 2em;
+    max-height: 22em;
+    overflow: auto;
+  }
 }
 /*# sourceMappingURL=PlateList.css.map */

@@ -66,4 +66,24 @@
   display: -ms-flexbox;
   display: flex;
 }
+
+@media (max-width: 1024px) {
+  .landing-left {
+    width: 80%;
+    padding: 1em 1em;
+  }
+  .landing-left .result-area {
+    margin-left: 0em;
+  }
+  .landing-left .result-area .card {
+    width: 5em;
+    height: 5em;
+  }
+  .landing-left form .size {
+    width: 84%;
+  }
+  .landing-left form input {
+    width: 95%;
+  }
+}
 /*# sourceMappingURL=SearchItemForm.css.map */
