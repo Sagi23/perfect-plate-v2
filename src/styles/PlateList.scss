@@ -25,16 +25,12 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     justify-items: center;
-    // gap: 0 2.5em;
     position: relative;
-    left: -16px;
-    right: 10px;
   }
 }
 .container {
   max-height: 319px;
   overflow: auto;
-  //   width: 103%;
 }
 .total-result-area {
   position: absolute;

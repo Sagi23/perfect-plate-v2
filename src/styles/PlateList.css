@@ -49,8 +49,6 @@
       grid-template-columns: repeat(6, 1fr);
   justify-items: center;
   position: relative;
-  left: -16px;
-  right: 10px;
 }
 
 .container {
