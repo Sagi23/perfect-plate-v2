@@ -37,7 +37,7 @@ function PlateList({ plate, setPlate }) {
         <p>protein</p>
         <p>calories</p>
         <p>fat</p>
-        <p>Delete</p>
+        {/* <p>Delete</p> */}
       </div>
       <div className="container">{renderdPlate}</div>
       <div className="total-result-area">
