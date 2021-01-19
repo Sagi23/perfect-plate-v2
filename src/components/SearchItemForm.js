@@ -11,11 +11,12 @@ function SearchItemForm({ getData, cal, pro, fat, setPlate, plate }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     getData(amount, item);
-    // resetItem();
-    // resetAmount();
   };
 
   const handleClick = () => {
+    if (item === "" || amount === "") {
+      return alert("Please enter valid input!");
+    }
     setPlate([{ item, amount, pro, cal, fat, id: uuid() }, ...plate]);
   };
 

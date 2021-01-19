@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 
-const useGetData = (size, item) => {
+const useGetData = () => {
   const [cal, setCal] = useState("");
   const [pro, setPro] = useState("");
   const [fat, setFat] = useState("");
@@ -22,10 +22,6 @@ const useGetData = (size, item) => {
     }
     return;
   };
-
-  useEffect(() => {
-    getData(size, item);
-  }, [size, item]);
 
   return { getData, cal, pro, fat };
 };
