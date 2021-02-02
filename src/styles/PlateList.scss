@@ -27,7 +27,26 @@
     justify-items: center;
     position: relative;
   }
+  table {
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  table td {
+    padding: 0.5rem;
+  }
+  table td + td {
+    border-left: 5px solid black;
+  }
+  table tr + tr td {
+    border-top: 5px solid black;
+  }
 }
+
+th {
+  vertical-align: baseline;
+  padding: 0.5rem;
+}
+
 .container {
   max-height: 319px;
   overflow: auto;

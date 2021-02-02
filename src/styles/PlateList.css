@@ -51,6 +51,28 @@
   position: relative;
 }
 
+.landing-right table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.landing-right table td {
+  padding: 0.5rem;
+}
+
+.landing-right table td + td {
+  border-left: 5px solid black;
+}
+
+.landing-right table tr + tr td {
+  border-top: 5px solid black;
+}
+
+th {
+  vertical-align: baseline;
+  padding: 0.5rem;
+}
+
 .container {
   max-height: 319px;
   overflow: auto;
